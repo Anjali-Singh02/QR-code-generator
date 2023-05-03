@@ -4,9 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				navColor: '#13315c',
-				bgDark: '#134074',
-				footerColor: '#0b2545',
+				fontColor: '#0b2545',
 			},
 		},
 	},

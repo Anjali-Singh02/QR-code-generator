@@ -1,14 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
 		<>
-			<nav className="bg-navColor text-white">
+			<nav className="text-fontColor">
 				<ul className="flex gap-x-14 text-lg cursor-pointer justify-items-end p-3">
 					<div className="text-2xl ">QRCode</div>
-					<li>Home</li>
-					<li>About</li>
-					<li>Contact</li>
+					<BrowserRouter>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/about">About</Link>
+						</li>
+						<li>
+							<Link to="/contact">Contact</Link>
+						</li>
+					</BrowserRouter>
 				</ul>
 			</nav>
 		</>
