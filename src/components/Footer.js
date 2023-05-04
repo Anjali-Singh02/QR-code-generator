@@ -18,7 +18,7 @@ const Footer = () => {
 					<Link to="https://www.linkedin.com/in/anjali-singh015/">
 						<BsLinkedin />
 					</Link>
-					<Link to="https://mail.google.com/mail/u/0/#inbox?compose=new">
+					<Link to="mailto:anjalikumarisingh015@gmail.com">
 						<SiGmail />
 					</Link>
 				</IconContext.Provider>
