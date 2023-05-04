@@ -64,9 +64,9 @@ function Home() {
 			</div>
 
 			{/* Rendering the QR code image if the QR code state is not empty */}
-			{qrCode && (
+			{(qrCode && (
 				<img src={qrCode} alt="QR code" className="h-56 m-auto " />
-			)}
+			)) || <p className="text-center m-20 h-16">Get QR Code</p>}
 		</div>
 	);
 }
