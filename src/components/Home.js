@@ -40,33 +40,33 @@ function Home() {
 
 	// Rendering the UI of the Home component
 	return (
-		<div className="bg-white w-1/2 m-auto h-96 mt-32 py-5 rounded-md border-2 border-fontColor drop-shadow-2xl">
-			<h1 className="text-center text-2xl text-fontColor py-3">
+		<div className="bg-white w-1/3 m-auto h-1/2 mt-32 py-5 rounded-md border-2  drop-shadow-2xl">
+			<h1 className="text-center text-2xl font-serif font-extrabold text-fontColor py-3">
 				QR code Generator
 			</h1>
-			<div className="flex justify-center">
+			<div className="flex flex-col">
 				<input
 					type="text"
 					name="qrcode"
 					value={url}
 					placeholder="QR code"
 					onChange={handleChangeUrl}
-					className=" w-8/12 p-2 m-auto mx-3 drop-shadow-md hover:drop-shadow-xl rounded-md  border-2  text-center"
+					className=" w-1/2 p-2 m-auto my-3 font-serif drop-shadow-md hover:drop-shadow-xl rounded-md  border-2  text-center"
 				/>
 
 				<button
 					type="button"
 					onClick={generateQRCode}
-					className="px-4 text-xl text-white font-bold rounded-md border-double shadow-inner hover:bg-white hover:text-fontColor bg-fontColor  border-2"
+					className="w-1/2 p-2 text-xl m-auto text-white font-serif font-bold rounded-md border-3 hover:border-fontColor drop-shadow-md hover:bg-white hover:text-fontColor bg-fontColor  border-2"
 				>
 					Generate QR Code
 				</button>
 			</div>
 
 			{/* Rendering the QR code image if the QR code state is not empty */}
-			{qrCode && (
+			{(qrCode && (
 				<img src={qrCode} alt="QR code" className="h-56 m-auto " />
-			)}
+			)) || <p className="text-center m-20 h-16">Get QR Code</p>}
 		</div>
 	);
 }

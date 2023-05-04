@@ -1,13 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
 		<>
 			<nav className="text-fontColor">
-				<ul className="flex gap-x-14 text-lg cursor-pointer justify-items-end p-3">
-					<div className="text-2xl ">QRCode</div>
-					<BrowserRouter>
+				<ul className="flex justify-between text-lg cursor-pointer p-3 font-serif">
+					<div className="text-2xl font-extrabold ">
+						<Link to="/"> QRCode</Link>
+					</div>
+					<div className="flex gap-x-14 pr-5">
 						<li>
 							<Link to="/">Home</Link>
 						</li>
@@ -17,7 +19,7 @@ const Navbar = () => {
 						<li>
 							<Link to="/contact">Contact</Link>
 						</li>
-					</BrowserRouter>
+					</div>
 				</ul>
 			</nav>
 		</>

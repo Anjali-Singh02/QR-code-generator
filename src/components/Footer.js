@@ -3,18 +3,31 @@ import { IconContext } from 'react-icons';
 import { VscGithubInverted } from 'react-icons/vsc';
 import { BsLinkedin } from 'react-icons/bs';
 import { SiGmail } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
-		<div className=" py-3 text-fontColor text-center flex justify-center">
-			<IconContext.Provider
-				value={{ size: '1.5em', className: 'mx-2 cursor-pointer ' }}
-			>
-				<VscGithubInverted />
-				<BsLinkedin />
-				<SiGmail />
-			</IconContext.Provider>
-		</div>
+		<>
+			<div className=" py-1 text-fontColor text-center flex justify-center">
+				<IconContext.Provider
+					value={{ size: '1.2em', className: 'mx-1 cursor-pointer ' }}
+				>
+					<Link to="https://github.com/AnjaliSingh02">
+						<VscGithubInverted />
+					</Link>
+					<Link to="https://www.linkedin.com/in/anjali-singh015/">
+						<BsLinkedin />
+					</Link>
+					<Link to="mailto:anjalikumarisingh015@gmail.com">
+						<SiGmail />
+					</Link>
+				</IconContext.Provider>
+			</div>
+			<div className="text-center pb-1 font-serif">
+				{' '}
+				QrCodeGenerator &copy; 2023
+			</div>
+		</>
 	);
 };
 
